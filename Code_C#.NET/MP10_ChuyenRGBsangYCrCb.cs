@@ -20,7 +20,7 @@ namespace MP02_TachAnhMauRGB_EmguCV
             //Tao bien chua duong dan luu hinh cua minh
             Image<Bgr, byte> hinhgoc = new Image<Bgr, byte>(@"H:\Code\Photo\girl.jpg");
 
-            //Hien thi hinh goc trong picBox_Hinhgoc da tao
+            //Hien thi hinh goc trong ImgBox_Hinhgoc da tao
             imageBox_Hinhgoc.Image = hinhgoc;
             Image<Bgr, byte> Y = new Image<Bgr, byte>(hinhgoc.Width, hinhgoc.Height);
             Image<Bgr, byte> Cr = new Image<Bgr, byte>(hinhgoc.Width, hinhgoc.Height);
@@ -51,17 +51,17 @@ namespace MP02_TachAnhMauRGB_EmguCV
                     Y.Data[y, x, 1] = (byte)Y_Value;
                     Y.Data[y, x, 0] = (byte)Y_Value;
 
-                    //Magenta la ket hop cua R va B
+                    
                     Cr.Data[y, x, 2] = (byte)Cr_Value;
                     Cr.Data[y, x, 1] = (byte)Cr_Value;
                     Cr.Data[y, x, 0] = (byte)Cr_Value;
 
-                    //Yellow la ket hop cua R va G
+                    
                     Cb.Data[y, x, 2] = (byte)Cb_Value;
                     Cb.Data[y, x, 1] = (byte)Cb_Value;
                     Cb.Data[y, x, 0] = (byte)Cb_Value;
 
-                    //Black tao ra khi gan gia tri min(R,G,B) vao ca 3 kenh R,G,B
+                    
                     YCrCb.Data[y, x, 2] = (byte)Y_Value;
                     YCrCb.Data[y, x, 1] = (byte)Cr_Value;
                     YCrCb.Data[y, x, 0] = (byte)Cb_Value;
