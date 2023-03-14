@@ -53,7 +53,7 @@ ThongSo = np.zeros(5, int)
 ThongSo = NhapThongSo()
 
 #Tao duong dan
-filehinh = r'bird_small.jpg'
+filehinh = r'lena30.jpg'
 #Đọc ảnh màu dùng thư viện OpenCV
 img = cv2.imread(filehinh, cv2.IMREAD_COLOR)
 #Đọc ảnh màu dùng thư viện PIL
